@@ -6,12 +6,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "fabricante")
-public class Maker {
+@Table(name = "producto")
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,5 +22,8 @@ public class Maker {
 
     @Column(name = "nombre")
     private String name;
+
+    @Column(name = "precio")
+    private BigDecimal price;
 
 }
